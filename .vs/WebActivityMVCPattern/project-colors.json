@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "1596aa7b-137a-4621-bc8d-0b6ae862f656": {
+      "ProjectGuid": "1596aa7b-137a-4621-bc8d-0b6ae862f656",
+      "DisplayName": "WebActivityMVCPattern",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

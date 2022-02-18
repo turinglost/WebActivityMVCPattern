@@ -1,0 +1,44 @@
+﻿@model WebActivityMVCPattern.Models.ActivityTrackerModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Home View</h2>
+<p>
+    <h3>Stats</h3>
+    <label>Last Activity:</label>
+    @Html.DisplayFor(model => model.LastActivity.ActivityType)
+    <br />
+    <label>Total Activity Count:</label>
+    @Html.DisplayFor(model => model.ActivityCount)
+    <p>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CurrentActivity.ActivityStarted" class="control-label"></label>
+                <input asp-for="CurrentActivity.ActivityStarted" class="form-control" />
+                <span asp-validation-for="CurrentActivity.ActivityStarted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentActivity.ActivityDurationMinutes" class="control-label"></label>
+                <input asp-for="CurrentActivity.ActivityDurationMinutes" class="form-control" />
+                <span asp-validation-for="CurrentActivity.ActivityDurationMinutes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentActivity.ActivityType" class="control-label"></label>
+                <select asp-for="CurrentActivity.ActivityType" asp-items="Model.ActivityTypesDropDown" ></select>
+                <!--<input asp-for="CurrentActivity.ActivityType" class="form-control" />
+                <span asp-validation-for="CurrentActivity.ActivityType" class="text-danger"></span>-->
+
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentActivity.ActivityComments" class="control-label"></label>
+                <input asp-for="CurrentActivity.ActivityComments" class="form-control" />
+                <span asp-validation-for="CurrentActivity.ActivityComments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </p>
+</p>
